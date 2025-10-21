@@ -1,0 +1,46 @@
+Folder PATH listing
+Volume serial number is 3A8A-697C
+C:.
+|   .gitattributes
+|   output.txt
+|   README.md
+|   
+\---Scripts
+    +---Core
+    |   |   EnumFlagsAttribute.cs
+    |   |   GameLayers.cs
+    |   |   ObjectPool.cs
+    |   |   PlayerControls.cs
+    |   |   PlayerControls.inputactions
+    |   |   PlayerInput.cs
+    |   |   
+    |   +---Editor
+    |   |       EnumFlagsDrawer.cs
+    |   |       
+    |   +---Gameplay
+    |   |       Damageable.cs
+    |   |       
+    |   +---Ship
+    |   |       CameraController.cs
+    |   |       EngineTrail.cs
+    |   |       EngineTrail_LineRenderer.cs
+    |   |       ShipController.cs
+    |   |       
+    |   \---Weapon
+    |           BeamWeapon.cs
+    |           FlankMineProjectile.cs
+    |           HomingMineProjectile.cs
+    |           HomingProjectile.cs
+    |           MineLayerProjectile.cs
+    |           MineProjectile.cs
+    |           Projectile.cs
+    |           ProjectileWeapon.cs
+    |           SwarmProjectile.cs
+    |           TargetingSystem.cs
+    |           WeaponBase.cs
+    |           WeaponSystem.cs
+    |           
+    \---UI
+            HUDManager.cs
+            HUDModule.cs
+            
