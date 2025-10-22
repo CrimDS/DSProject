@@ -14,43 +14,45 @@ public class HomingProjectile : Projectile
     [SerializeField] protected float proximityFuseRadius = 10f;
     [SerializeField] private float autoTargetRange = 500f;
 
-    public float BoostDuration { get; set; } = 0.5f;
-    public float BoostThrust { get; set; } = 50f;
-    public Vector3 BoostDirection { get; set; } = Vector3.forward;
-    public BoostSpace BoostLaunchSpace { get; set; } = BoostSpace.Local;
-
-    protected float randomSeed;
+    // These are private and set by the weapon launcher.
+    private float boostDuration;
+    private float boostThrust;
+    private Vector3 worldBoostDirection;
     
+    protected float randomSeed;
     private float lastTargetSearchTime;
     private const float TARGET_SEARCH_INTERVAL = 0.5f;
     private float sqrProximityFuseRadius;
 
-    public enum BoostSpace { Local, World }
-
     protected override void Awake()
     {
         base.Awake();
+        randomSeed = Random.Range(0f, 1000f);
         sqrProximityFuseRadius = proximityFuseRadius * proximityFuseRadius;
     }
-
+    
     public override void ResetProjectile()
     {
         base.ResetProjectile();
         randomSeed = Random.Range(0f, 1000f);
+    }
+
+    // New public method for the weapon to call to start the boost.
+    public void StartBoostPhase(float duration, float thrust, Vector3 worldDirection)
+    {
+        this.boostDuration = duration;
+        this.boostThrust = thrust;
+        this.worldBoostDirection = worldDirection;
     }
     
     protected override void FixedUpdate()
     {
         age += Time.fixedDeltaTime;
 
-        if (age <= BoostDuration)
+        if (age <= boostDuration)
         {
-            // Boost Phase
-            float currentSpeed = projectileSpeed + BoostThrust;
-            Vector3 worldBoostDirection = BoostLaunchSpace == BoostSpace.Local 
-                ? (transform.parent != null ? transform.parent.TransformDirection(BoostDirection.normalized) : transform.TransformDirection(BoostDirection.normalized)) 
-                : BoostDirection.normalized;
-
+            // Boost phase now uses the pre-calculated world-space direction.
+            float currentSpeed = projectileSpeed + boostThrust;
             rb.linearVelocity = worldBoostDirection * currentSpeed;
             if (rb.linearVelocity.sqrMagnitude > 0.01f)
             {
@@ -59,40 +61,14 @@ public class HomingProjectile : Projectile
         }
         else 
         {
-            if (target != null && !target.gameObject.activeInHierarchy)
-            {
-                target = null;
-            }
-
-            if (target != null)
-            {
-                if (owner != null && target.root == owner)
-                {
-                    FindNewTarget();
-                    rb.linearVelocity = transform.forward * projectileSpeed;
-                    return;
-                }
-
-                Vector3 directionToTarget = (target.position - rb.position).normalized;
-                
-                float wobbleX = (Mathf.PerlinNoise(Time.time * wobbleFrequency, randomSeed) - 0.5f) * 2f;
-                float wobbleY = (Mathf.PerlinNoise(randomSeed, Time.time * wobbleFrequency) - 0.5f) * 2f;
-                Vector3 wobble = new Vector3(wobbleX, wobbleY, 0) * (wobbleAmplitude * 0.1f);
-                Quaternion targetRotation = Quaternion.LookRotation(directionToTarget) * Quaternion.Euler(wobble);
-
-                rb.MoveRotation(Quaternion.RotateTowards(rb.rotation, targetRotation, turnRate * Time.fixedDeltaTime));
-            }
-            else
-            {
-                FindNewTarget();
-            }
-             
-            rb.linearVelocity = transform.forward * projectileSpeed;
+            // Guidance Phase
+            HandleGuidance();
         }
 
-        if (age > BoostDuration && target != null)
+        // Proximity Detonation
+        if (age > boostDuration && target != null)
         {
-            if (sqrProximityFuseRadius > 0 && (target.position - rb.position).sqrMagnitude < sqrProximityFuseRadius)
+            if (proximityFuseRadius > 0 && (target.position - rb.position).sqrMagnitude < sqrProximityFuseRadius)
             {
                 Explode();
                 Damageable damageable = target.GetComponent<Damageable>();
@@ -102,6 +78,39 @@ public class HomingProjectile : Projectile
                 }
             }
         }
+    }
+    
+    protected void HandleGuidance()
+    {
+        if (target != null && !target.gameObject.activeInHierarchy)
+        {
+            target = null;
+        }
+
+        if (target != null)
+        {
+            if (owner != null && target.root == owner)
+            {
+                FindNewTarget();
+                rb.linearVelocity = transform.forward * projectileSpeed;
+                return;
+            }
+
+            Vector3 directionToTarget = (target.position - rb.position).normalized;
+            
+            float wobbleX = (Mathf.PerlinNoise(Time.time * wobbleFrequency, randomSeed) - 0.5f) * 2f;
+            float wobbleY = (Mathf.PerlinNoise(randomSeed, Time.time * wobbleFrequency) - 0.5f) * 2f;
+            Vector3 wobble = new Vector3(wobbleX, wobbleY, 0) * (wobbleAmplitude * 0.1f);
+            Quaternion targetRotation = Quaternion.LookRotation(directionToTarget) * Quaternion.Euler(wobble);
+
+            rb.MoveRotation(Quaternion.RotateTowards(rb.rotation, targetRotation, turnRate * Time.fixedDeltaTime));
+        }
+        else
+        {
+            FindNewTarget();
+        }
+         
+        rb.linearVelocity = transform.forward * projectileSpeed;
     }
     
     protected void FindNewTarget()

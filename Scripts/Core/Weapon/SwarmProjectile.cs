@@ -23,6 +23,11 @@ public class SwarmProjectile : HomingProjectile
             Debug.LogError("FATAL: SwarmProjectile prefab is missing its Submunition Prefab assignment in the Inspector!", this);
         }
     }
+    
+    protected override void OnCollisionEnter(Collision collision)
+    {
+        return; 
+    }
 
     protected override void FixedUpdate()
     {
@@ -47,7 +52,7 @@ public class SwarmProjectile : HomingProjectile
 
         if (explosionPrefab != null)
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            ObjectPool.Instance.GetFromPool(explosionPrefab, transform.position, Quaternion.identity);
         }
 
         for (int i = 0; i < submunitionCount; i++)
@@ -76,7 +81,7 @@ public class SwarmProjectile : HomingProjectile
                 }
             }
         }
-
+        
         ReturnToPool();
     }
 }

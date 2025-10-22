@@ -1,10 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// A generic object pooling system, implemented as a Singleton.
-/// This manages pools of reusable GameObjects to improve performance.
-/// </summary>
 public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance { get; private set; }
@@ -17,7 +13,6 @@ public class ObjectPool : MonoBehaviour
     }
 
     [Header("Initial Pools")]
-    [Tooltip("Define all projectile prefabs that should be pre-warmed on startup.")]
     public List<Pool> pools;
 
     private Dictionary<GameObject, Queue<GameObject>> poolDictionary;
@@ -40,8 +35,10 @@ public class ObjectPool : MonoBehaviour
             Queue<GameObject> objectPool = new Queue<GameObject>();
             for (int i = 0; i < pool.size; i++)
             {
+                // --- THE FIX ---
+                // Create the object and immediately stamp it with its original prefab.
                 GameObject obj = Instantiate(pool.prefab);
-                // Assign the original prefab to the projectile script
+                obj.transform.SetParent(this.transform);
                 Projectile p = obj.GetComponent<Projectile>();
                 if (p != null) p.SetOriginalPrefab(pool.prefab);
 
@@ -56,7 +53,7 @@ public class ObjectPool : MonoBehaviour
     {
         if (!poolDictionary.ContainsKey(prefab))
         {
-            Debug.LogWarning($"Pool with prefab '{prefab.name}' doesn't exist. Creating a new one dynamically. For best performance, add it to the ObjectPoolManager's initial pools.", this);
+            Debug.LogWarning($"Pool with prefab '{prefab.name}' doesn't exist. Creating a new one dynamically.", this);
             poolDictionary.Add(prefab, new Queue<GameObject>());
         }
 
@@ -68,8 +65,9 @@ public class ObjectPool : MonoBehaviour
         }
         else
         {
-            // Pool is empty, expand it by creating a new object.
+            // Expand the pool and stamp the new object.
             objectToSpawn = Instantiate(prefab);
+            objectToSpawn.transform.SetParent(this.transform);
             Projectile p = objectToSpawn.GetComponent<Projectile>();
             if (p != null) p.SetOriginalPrefab(prefab);
         }

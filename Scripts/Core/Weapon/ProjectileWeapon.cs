@@ -54,9 +54,9 @@ public class ProjectileWeapon : WeaponBase
 
             if (projectile is HomingProjectile homingMissile)
             {
-                homingMissile.BoostDuration = boostDuration;
-                homingMissile.BoostThrust = boostThrust;
-                homingMissile.BoostDirection = boostDirection;
+                // Calculate the world-space boost direction here and pass it to the missile.
+                Vector3 worldBoostDirection = firePoint.TransformDirection(boostDirection.normalized);
+                homingMissile.StartBoostPhase(boostDuration, boostThrust, worldBoostDirection);
             }
         }
     }

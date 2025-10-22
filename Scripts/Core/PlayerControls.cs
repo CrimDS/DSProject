@@ -93,60 +93,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""id"": ""3d2bb49e-b488-46ba-80aa-8419dd0e7a78"",
             ""actions"": [
                 {
-                    ""name"": ""Move"",
-                    ""type"": ""Value"",
-                    ""id"": ""c1036f48-dfea-48d4-a8b5-5b9ad8b01815"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""AllStop"",
-                    ""type"": ""Button"",
-                    ""id"": ""b59c1222-bfd7-4ad1-b632-1d201d1193b6"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""AlphaStrike"",
-                    ""type"": ""Button"",
-                    ""id"": ""10e3d158-6930-48b2-9dba-7a6bcf64f252"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""CycleTarget"",
-                    ""type"": ""Button"",
-                    ""id"": ""49d470a5-41ab-4baa-9dfa-2d9b00494187"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FireGroup1"",
-                    ""type"": ""Button"",
-                    ""id"": ""4ab6332d-2799-4ed7-9c73-9651153e6de5"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""FireGroup2"",
-                    ""type"": ""Button"",
-                    ""id"": ""a22b9e8b-7e73-4b2d-a303-cc3b4416ca00"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""FireGroup3"",
                     ""type"": ""Button"",
                     ""id"": ""e7978501-3649-4b22-9998-adf6382558c0"",
@@ -172,218 +118,63 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""AllStop"",
+                    ""type"": ""Button"",
+                    ""id"": ""04c477b3-87b9-4ea8-a757-e5e055cea6c8"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""462dcb05-6363-4135-95a0-c139b2f15fa7"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""AlphaStrike"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a2f7ca6-8db2-496e-8921-a103a4a8f809"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FireGroup1"",
+                    ""type"": ""Button"",
+                    ""id"": ""434290ba-9c20-47cb-86df-39d2a0021233"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""CycleTarget"",
+                    ""type"": ""Button"",
+                    ""id"": ""384e21f5-ae80-47f3-8aaf-ee86a246f670"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FireGroup2"",
+                    ""type"": ""Button"",
+                    ""id"": ""10078768-334d-44bd-8d3f-70a3a86bc8ca"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""e734a4a7-3606-4ffd-8ca8-77af1a496808"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""12c79add-4fd1-4d58-8ca4-f03f864ebe32"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""cf3587b4-6296-4ed7-b6e0-19af1217dce2"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""d702f2bc-2e1c-4e9f-a03f-196d875cae3c"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""36d6a313-9703-4fea-bfaf-00227607ef7b"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""635b4948-f118-4ae7-b16b-473a478c9455"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""4c37401d-f9b6-4967-8321-3bc46d36e5fb"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f14f3639-d7d1-4cda-b12b-82694e11d1d3"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AllStop"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""6e40299d-7756-45dc-b649-47a5ff599acd"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AlphaStrike"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""274e110d-b81e-4ee7-9d70-40c78ea6dc66"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""AlphaStrike"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""76a262ef-5eb6-4e19-831f-102a589993be"",
-                    ""path"": ""<Keyboard>/t"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""CycleTarget"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""89bb8701-72f4-4618-875b-213144179f62"",
-                    ""path"": ""<Keyboard>/1"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""One Modifier"",
-                    ""id"": ""13852eb7-9ee5-4d21-b153-90c65c5c081d"",
-                    ""path"": ""OneModifier"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup1"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""modifier"",
-                    ""id"": ""3cb9c07d-013b-4b29-9f68-6754b681c267"",
-                    ""path"": ""<Gamepad>/dpad/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""binding"",
-                    ""id"": ""14beaa7c-fd99-4f82-bfd6-51eb6a7e6599"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""e50e50ce-3478-49ed-a3fa-4091c137bd2f"",
-                    ""path"": ""<Keyboard>/2"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""One Modifier"",
-                    ""id"": ""c3cb7734-092b-4d04-885f-01ce3bd49c06"",
-                    ""path"": ""OneModifier"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup2"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""modifier"",
-                    ""id"": ""c023dbdf-d7f0-4254-adeb-b8903d954d34"",
-                    ""path"": ""<Gamepad>/dpad/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""binding"",
-                    ""id"": ""e55221ba-b1e2-4d49-bbe0-c5c104a4ee20"",
-                    ""path"": ""<Gamepad>/rightTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""FireGroup2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": """",
                     ""id"": ""2f794aea-1eb1-4b84-b3da-f86ff5f9eb47"",
@@ -449,6 +240,215 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""FireGroup5"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6aa247a9-ccf2-48ee-aa23-6bfafd7356f5"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AllStop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e3baba9e-790f-4eed-8a42-0657ed98173f"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""5dbd167a-10f2-4da6-b56d-0ae37695f17b"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""36ee9ebf-5c2c-480a-9163-d55eda0905a0"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c3d7c0ac-e9d2-481f-8546-230e12257c06"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""3225d5a7-584d-4db0-b262-4c86e36b50a0"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""027fea99-0751-4d12-be0b-2bb5fab2e862"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7791662c-dae9-4e4c-8534-18f5622f83c8"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""61b33d7b-7a7a-457d-aeaa-7c89e712d9d8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AlphaStrike"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f87cd32c-f360-451b-aace-45ef61fcd3fd"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AlphaStrike"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c2f66389-ab01-4ce3-bf6f-dcf6f4fb269a"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""86d06434-3de5-4616-b157-52471c6e7190"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup1"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""4d572bea-4006-44d3-930b-8f8c22461017"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""36494b96-8b77-4ecf-9981-517c30f463cc"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ae4e1969-957a-49d8-9803-3319634259c8"",
+                    ""path"": ""<Keyboard>/t"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CycleTarget"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11c2bee1-14c0-4b29-aae5-94130140ae5f"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""One Modifier"",
+                    ""id"": ""180f0446-0ad7-4551-83b0-bf47f4a7e4b7"",
+                    ""path"": ""OneModifier"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup2"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""modifier"",
+                    ""id"": ""f1b9b8cc-ad1e-4578-90f4-38fa9dcfe4af"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""binding"",
+                    ""id"": ""b92f56e6-59cb-4f9a-9de3-148cb92d7237"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FireGroup2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -456,33 +456,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""name"": ""Camera"",
             ""id"": ""cd693c71-d9b8-4f1a-a97f-2f8e1053b3ff"",
             ""actions"": [
-                {
-                    ""name"": ""OrbitModifier"",
-                    ""type"": ""Button"",
-                    ""id"": ""43afd08c-0547-4069-81a7-4ac4f044d0de"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""OrbitMouse"",
-                    ""type"": ""Value"",
-                    ""id"": ""9eac20a7-f622-4b9e-900f-22160dddeeb9"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""OrbitGamepad"",
-                    ""type"": ""Value"",
-                    ""id"": ""69fb689c-74de-4c77-91ca-6f3b6546ea15"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
                 {
                     ""name"": ""Zoom"",
                     ""type"": ""Value"",
@@ -500,20 +473,63 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ToggleCameraMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""02451772-2074-4e9f-bca7-dc20ae3a0516"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StrafeCameraVertical"",
+                    ""type"": ""Value"",
+                    ""id"": ""bf0aba0b-e91c-46e1-bdf7-54efeda32fe0"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""OrbitModifier"",
+                    ""type"": ""Button"",
+                    ""id"": ""da3247f5-1bec-4e3f-9f8d-71145f1fb1f6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""MoveCamera"",
+                    ""type"": ""Button"",
+                    ""id"": ""4db7b7c5-fd1a-48f1-b897-3dbdec2ff222"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""OrbitMouse"",
+                    ""type"": ""Value"",
+                    ""id"": ""d46e0c17-78df-4f00-a7d5-3761efd1fefb"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""OrbitGamepad"",
+                    ""type"": ""Value"",
+                    ""id"": ""5c0b164a-0c76-4181-b445-56cff32b3242"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""0baa4793-9b8b-4508-a929-43a3175c30a0"",
-                    ""path"": ""<Mouse>/delta"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""OrbitMouse"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": """",
                     ""id"": ""896f880b-30cb-43be-bc17-c403d639812d"",
@@ -538,7 +554,51 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8ff5bf11-54d5-4ae1-b5f6-77b86381489f"",
+                    ""id"": ""404c04a4-13c1-473e-a0f4-4a801ad6722a"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ToggleCameraMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""5ca2c8eb-3fc4-49e9-a470-3e9420f1736c"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StrafeCameraVertical"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""a7429cdf-ab22-4fd2-977c-e34ba2cbc622"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StrafeCameraVertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""91e2c088-3d03-4024-b3f5-88e681fb64e7"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StrafeCameraVertical"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""810b5060-a9b4-46cb-a40a-d38762c2e641"",
                     ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -548,8 +608,74 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""4f415c62-5393-4756-9927-98903ea74fed"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""790885f3-7242-499a-bd93-f541d1605551"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""a32dbb25-1f41-4b92-9446-93c2556b97d9"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""bbdedc0d-3661-454d-beb6-b4a460c82216"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""d9b64e04-2431-49fc-807b-0af6b2a37249"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveCamera"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
-                    ""id"": ""975ecd26-db36-4ddf-97ef-bb83824536ae"",
+                    ""id"": ""db1bfafe-94b6-4d8b-9648-71a195de2e58"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""OrbitMouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1c6e0d8e-e65e-4775-acd6-92c51017638c"",
                     ""path"": ""<Gamepad>/rightStick"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -565,22 +691,25 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
 }");
         // Gameplay
         m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
-        m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
-        m_Gameplay_AllStop = m_Gameplay.FindAction("AllStop", throwIfNotFound: true);
-        m_Gameplay_AlphaStrike = m_Gameplay.FindAction("AlphaStrike", throwIfNotFound: true);
-        m_Gameplay_CycleTarget = m_Gameplay.FindAction("CycleTarget", throwIfNotFound: true);
-        m_Gameplay_FireGroup1 = m_Gameplay.FindAction("FireGroup1", throwIfNotFound: true);
-        m_Gameplay_FireGroup2 = m_Gameplay.FindAction("FireGroup2", throwIfNotFound: true);
         m_Gameplay_FireGroup3 = m_Gameplay.FindAction("FireGroup3", throwIfNotFound: true);
         m_Gameplay_FireGroup4 = m_Gameplay.FindAction("FireGroup4", throwIfNotFound: true);
         m_Gameplay_FireGroup5 = m_Gameplay.FindAction("FireGroup5", throwIfNotFound: true);
+        m_Gameplay_AllStop = m_Gameplay.FindAction("AllStop", throwIfNotFound: true);
+        m_Gameplay_Move = m_Gameplay.FindAction("Move", throwIfNotFound: true);
+        m_Gameplay_AlphaStrike = m_Gameplay.FindAction("AlphaStrike", throwIfNotFound: true);
+        m_Gameplay_FireGroup1 = m_Gameplay.FindAction("FireGroup1", throwIfNotFound: true);
+        m_Gameplay_CycleTarget = m_Gameplay.FindAction("CycleTarget", throwIfNotFound: true);
+        m_Gameplay_FireGroup2 = m_Gameplay.FindAction("FireGroup2", throwIfNotFound: true);
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
-        m_Camera_OrbitModifier = m_Camera.FindAction("OrbitModifier", throwIfNotFound: true);
-        m_Camera_OrbitMouse = m_Camera.FindAction("OrbitMouse", throwIfNotFound: true);
-        m_Camera_OrbitGamepad = m_Camera.FindAction("OrbitGamepad", throwIfNotFound: true);
         m_Camera_Zoom = m_Camera.FindAction("Zoom", throwIfNotFound: true);
         m_Camera_ZoomModifier = m_Camera.FindAction("Zoom Modifier", throwIfNotFound: true);
+        m_Camera_ToggleCameraMode = m_Camera.FindAction("ToggleCameraMode", throwIfNotFound: true);
+        m_Camera_StrafeCameraVertical = m_Camera.FindAction("StrafeCameraVertical", throwIfNotFound: true);
+        m_Camera_OrbitModifier = m_Camera.FindAction("OrbitModifier", throwIfNotFound: true);
+        m_Camera_MoveCamera = m_Camera.FindAction("MoveCamera", throwIfNotFound: true);
+        m_Camera_OrbitMouse = m_Camera.FindAction("OrbitMouse", throwIfNotFound: true);
+        m_Camera_OrbitGamepad = m_Camera.FindAction("OrbitGamepad", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -662,15 +791,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // Gameplay
     private readonly InputActionMap m_Gameplay;
     private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
-    private readonly InputAction m_Gameplay_Move;
-    private readonly InputAction m_Gameplay_AllStop;
-    private readonly InputAction m_Gameplay_AlphaStrike;
-    private readonly InputAction m_Gameplay_CycleTarget;
-    private readonly InputAction m_Gameplay_FireGroup1;
-    private readonly InputAction m_Gameplay_FireGroup2;
     private readonly InputAction m_Gameplay_FireGroup3;
     private readonly InputAction m_Gameplay_FireGroup4;
     private readonly InputAction m_Gameplay_FireGroup5;
+    private readonly InputAction m_Gameplay_AllStop;
+    private readonly InputAction m_Gameplay_Move;
+    private readonly InputAction m_Gameplay_AlphaStrike;
+    private readonly InputAction m_Gameplay_FireGroup1;
+    private readonly InputAction m_Gameplay_CycleTarget;
+    private readonly InputAction m_Gameplay_FireGroup2;
     /// <summary>
     /// Provides access to input actions defined in input action map "Gameplay".
     /// </summary>
@@ -683,30 +812,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public GameplayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Gameplay/Move".
-        /// </summary>
-        public InputAction @Move => m_Wrapper.m_Gameplay_Move;
-        /// <summary>
-        /// Provides access to the underlying input action "Gameplay/AllStop".
-        /// </summary>
-        public InputAction @AllStop => m_Wrapper.m_Gameplay_AllStop;
-        /// <summary>
-        /// Provides access to the underlying input action "Gameplay/AlphaStrike".
-        /// </summary>
-        public InputAction @AlphaStrike => m_Wrapper.m_Gameplay_AlphaStrike;
-        /// <summary>
-        /// Provides access to the underlying input action "Gameplay/CycleTarget".
-        /// </summary>
-        public InputAction @CycleTarget => m_Wrapper.m_Gameplay_CycleTarget;
-        /// <summary>
-        /// Provides access to the underlying input action "Gameplay/FireGroup1".
-        /// </summary>
-        public InputAction @FireGroup1 => m_Wrapper.m_Gameplay_FireGroup1;
-        /// <summary>
-        /// Provides access to the underlying input action "Gameplay/FireGroup2".
-        /// </summary>
-        public InputAction @FireGroup2 => m_Wrapper.m_Gameplay_FireGroup2;
-        /// <summary>
         /// Provides access to the underlying input action "Gameplay/FireGroup3".
         /// </summary>
         public InputAction @FireGroup3 => m_Wrapper.m_Gameplay_FireGroup3;
@@ -718,6 +823,30 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Gameplay/FireGroup5".
         /// </summary>
         public InputAction @FireGroup5 => m_Wrapper.m_Gameplay_FireGroup5;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/AllStop".
+        /// </summary>
+        public InputAction @AllStop => m_Wrapper.m_Gameplay_AllStop;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/Move".
+        /// </summary>
+        public InputAction @Move => m_Wrapper.m_Gameplay_Move;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/AlphaStrike".
+        /// </summary>
+        public InputAction @AlphaStrike => m_Wrapper.m_Gameplay_AlphaStrike;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/FireGroup1".
+        /// </summary>
+        public InputAction @FireGroup1 => m_Wrapper.m_Gameplay_FireGroup1;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/CycleTarget".
+        /// </summary>
+        public InputAction @CycleTarget => m_Wrapper.m_Gameplay_CycleTarget;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/FireGroup2".
+        /// </summary>
+        public InputAction @FireGroup2 => m_Wrapper.m_Gameplay_FireGroup2;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -744,24 +873,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_GameplayActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_GameplayActionsCallbackInterfaces.Add(instance);
-            @Move.started += instance.OnMove;
-            @Move.performed += instance.OnMove;
-            @Move.canceled += instance.OnMove;
-            @AllStop.started += instance.OnAllStop;
-            @AllStop.performed += instance.OnAllStop;
-            @AllStop.canceled += instance.OnAllStop;
-            @AlphaStrike.started += instance.OnAlphaStrike;
-            @AlphaStrike.performed += instance.OnAlphaStrike;
-            @AlphaStrike.canceled += instance.OnAlphaStrike;
-            @CycleTarget.started += instance.OnCycleTarget;
-            @CycleTarget.performed += instance.OnCycleTarget;
-            @CycleTarget.canceled += instance.OnCycleTarget;
-            @FireGroup1.started += instance.OnFireGroup1;
-            @FireGroup1.performed += instance.OnFireGroup1;
-            @FireGroup1.canceled += instance.OnFireGroup1;
-            @FireGroup2.started += instance.OnFireGroup2;
-            @FireGroup2.performed += instance.OnFireGroup2;
-            @FireGroup2.canceled += instance.OnFireGroup2;
             @FireGroup3.started += instance.OnFireGroup3;
             @FireGroup3.performed += instance.OnFireGroup3;
             @FireGroup3.canceled += instance.OnFireGroup3;
@@ -771,6 +882,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @FireGroup5.started += instance.OnFireGroup5;
             @FireGroup5.performed += instance.OnFireGroup5;
             @FireGroup5.canceled += instance.OnFireGroup5;
+            @AllStop.started += instance.OnAllStop;
+            @AllStop.performed += instance.OnAllStop;
+            @AllStop.canceled += instance.OnAllStop;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
+            @AlphaStrike.started += instance.OnAlphaStrike;
+            @AlphaStrike.performed += instance.OnAlphaStrike;
+            @AlphaStrike.canceled += instance.OnAlphaStrike;
+            @FireGroup1.started += instance.OnFireGroup1;
+            @FireGroup1.performed += instance.OnFireGroup1;
+            @FireGroup1.canceled += instance.OnFireGroup1;
+            @CycleTarget.started += instance.OnCycleTarget;
+            @CycleTarget.performed += instance.OnCycleTarget;
+            @CycleTarget.canceled += instance.OnCycleTarget;
+            @FireGroup2.started += instance.OnFireGroup2;
+            @FireGroup2.performed += instance.OnFireGroup2;
+            @FireGroup2.canceled += instance.OnFireGroup2;
         }
 
         /// <summary>
@@ -782,24 +911,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="GameplayActions" />
         private void UnregisterCallbacks(IGameplayActions instance)
         {
-            @Move.started -= instance.OnMove;
-            @Move.performed -= instance.OnMove;
-            @Move.canceled -= instance.OnMove;
-            @AllStop.started -= instance.OnAllStop;
-            @AllStop.performed -= instance.OnAllStop;
-            @AllStop.canceled -= instance.OnAllStop;
-            @AlphaStrike.started -= instance.OnAlphaStrike;
-            @AlphaStrike.performed -= instance.OnAlphaStrike;
-            @AlphaStrike.canceled -= instance.OnAlphaStrike;
-            @CycleTarget.started -= instance.OnCycleTarget;
-            @CycleTarget.performed -= instance.OnCycleTarget;
-            @CycleTarget.canceled -= instance.OnCycleTarget;
-            @FireGroup1.started -= instance.OnFireGroup1;
-            @FireGroup1.performed -= instance.OnFireGroup1;
-            @FireGroup1.canceled -= instance.OnFireGroup1;
-            @FireGroup2.started -= instance.OnFireGroup2;
-            @FireGroup2.performed -= instance.OnFireGroup2;
-            @FireGroup2.canceled -= instance.OnFireGroup2;
             @FireGroup3.started -= instance.OnFireGroup3;
             @FireGroup3.performed -= instance.OnFireGroup3;
             @FireGroup3.canceled -= instance.OnFireGroup3;
@@ -809,6 +920,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @FireGroup5.started -= instance.OnFireGroup5;
             @FireGroup5.performed -= instance.OnFireGroup5;
             @FireGroup5.canceled -= instance.OnFireGroup5;
+            @AllStop.started -= instance.OnAllStop;
+            @AllStop.performed -= instance.OnAllStop;
+            @AllStop.canceled -= instance.OnAllStop;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
+            @AlphaStrike.started -= instance.OnAlphaStrike;
+            @AlphaStrike.performed -= instance.OnAlphaStrike;
+            @AlphaStrike.canceled -= instance.OnAlphaStrike;
+            @FireGroup1.started -= instance.OnFireGroup1;
+            @FireGroup1.performed -= instance.OnFireGroup1;
+            @FireGroup1.canceled -= instance.OnFireGroup1;
+            @CycleTarget.started -= instance.OnCycleTarget;
+            @CycleTarget.performed -= instance.OnCycleTarget;
+            @CycleTarget.canceled -= instance.OnCycleTarget;
+            @FireGroup2.started -= instance.OnFireGroup2;
+            @FireGroup2.performed -= instance.OnFireGroup2;
+            @FireGroup2.canceled -= instance.OnFireGroup2;
         }
 
         /// <summary>
@@ -846,11 +975,14 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     // Camera
     private readonly InputActionMap m_Camera;
     private List<ICameraActions> m_CameraActionsCallbackInterfaces = new List<ICameraActions>();
-    private readonly InputAction m_Camera_OrbitModifier;
-    private readonly InputAction m_Camera_OrbitMouse;
-    private readonly InputAction m_Camera_OrbitGamepad;
     private readonly InputAction m_Camera_Zoom;
     private readonly InputAction m_Camera_ZoomModifier;
+    private readonly InputAction m_Camera_ToggleCameraMode;
+    private readonly InputAction m_Camera_StrafeCameraVertical;
+    private readonly InputAction m_Camera_OrbitModifier;
+    private readonly InputAction m_Camera_MoveCamera;
+    private readonly InputAction m_Camera_OrbitMouse;
+    private readonly InputAction m_Camera_OrbitGamepad;
     /// <summary>
     /// Provides access to input actions defined in input action map "Camera".
     /// </summary>
@@ -863,9 +995,29 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public CameraActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         /// <summary>
+        /// Provides access to the underlying input action "Camera/Zoom".
+        /// </summary>
+        public InputAction @Zoom => m_Wrapper.m_Camera_Zoom;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/ZoomModifier".
+        /// </summary>
+        public InputAction @ZoomModifier => m_Wrapper.m_Camera_ZoomModifier;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/ToggleCameraMode".
+        /// </summary>
+        public InputAction @ToggleCameraMode => m_Wrapper.m_Camera_ToggleCameraMode;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/StrafeCameraVertical".
+        /// </summary>
+        public InputAction @StrafeCameraVertical => m_Wrapper.m_Camera_StrafeCameraVertical;
+        /// <summary>
         /// Provides access to the underlying input action "Camera/OrbitModifier".
         /// </summary>
         public InputAction @OrbitModifier => m_Wrapper.m_Camera_OrbitModifier;
+        /// <summary>
+        /// Provides access to the underlying input action "Camera/MoveCamera".
+        /// </summary>
+        public InputAction @MoveCamera => m_Wrapper.m_Camera_MoveCamera;
         /// <summary>
         /// Provides access to the underlying input action "Camera/OrbitMouse".
         /// </summary>
@@ -874,14 +1026,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Camera/OrbitGamepad".
         /// </summary>
         public InputAction @OrbitGamepad => m_Wrapper.m_Camera_OrbitGamepad;
-        /// <summary>
-        /// Provides access to the underlying input action "Camera/Zoom".
-        /// </summary>
-        public InputAction @Zoom => m_Wrapper.m_Camera_Zoom;
-        /// <summary>
-        /// Provides access to the underlying input action "Camera/ZoomModifier".
-        /// </summary>
-        public InputAction @ZoomModifier => m_Wrapper.m_Camera_ZoomModifier;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -908,21 +1052,30 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_CameraActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_CameraActionsCallbackInterfaces.Add(instance);
-            @OrbitModifier.started += instance.OnOrbitModifier;
-            @OrbitModifier.performed += instance.OnOrbitModifier;
-            @OrbitModifier.canceled += instance.OnOrbitModifier;
-            @OrbitMouse.started += instance.OnOrbitMouse;
-            @OrbitMouse.performed += instance.OnOrbitMouse;
-            @OrbitMouse.canceled += instance.OnOrbitMouse;
-            @OrbitGamepad.started += instance.OnOrbitGamepad;
-            @OrbitGamepad.performed += instance.OnOrbitGamepad;
-            @OrbitGamepad.canceled += instance.OnOrbitGamepad;
             @Zoom.started += instance.OnZoom;
             @Zoom.performed += instance.OnZoom;
             @Zoom.canceled += instance.OnZoom;
             @ZoomModifier.started += instance.OnZoomModifier;
             @ZoomModifier.performed += instance.OnZoomModifier;
             @ZoomModifier.canceled += instance.OnZoomModifier;
+            @ToggleCameraMode.started += instance.OnToggleCameraMode;
+            @ToggleCameraMode.performed += instance.OnToggleCameraMode;
+            @ToggleCameraMode.canceled += instance.OnToggleCameraMode;
+            @StrafeCameraVertical.started += instance.OnStrafeCameraVertical;
+            @StrafeCameraVertical.performed += instance.OnStrafeCameraVertical;
+            @StrafeCameraVertical.canceled += instance.OnStrafeCameraVertical;
+            @OrbitModifier.started += instance.OnOrbitModifier;
+            @OrbitModifier.performed += instance.OnOrbitModifier;
+            @OrbitModifier.canceled += instance.OnOrbitModifier;
+            @MoveCamera.started += instance.OnMoveCamera;
+            @MoveCamera.performed += instance.OnMoveCamera;
+            @MoveCamera.canceled += instance.OnMoveCamera;
+            @OrbitMouse.started += instance.OnOrbitMouse;
+            @OrbitMouse.performed += instance.OnOrbitMouse;
+            @OrbitMouse.canceled += instance.OnOrbitMouse;
+            @OrbitGamepad.started += instance.OnOrbitGamepad;
+            @OrbitGamepad.performed += instance.OnOrbitGamepad;
+            @OrbitGamepad.canceled += instance.OnOrbitGamepad;
         }
 
         /// <summary>
@@ -934,21 +1087,30 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="CameraActions" />
         private void UnregisterCallbacks(ICameraActions instance)
         {
-            @OrbitModifier.started -= instance.OnOrbitModifier;
-            @OrbitModifier.performed -= instance.OnOrbitModifier;
-            @OrbitModifier.canceled -= instance.OnOrbitModifier;
-            @OrbitMouse.started -= instance.OnOrbitMouse;
-            @OrbitMouse.performed -= instance.OnOrbitMouse;
-            @OrbitMouse.canceled -= instance.OnOrbitMouse;
-            @OrbitGamepad.started -= instance.OnOrbitGamepad;
-            @OrbitGamepad.performed -= instance.OnOrbitGamepad;
-            @OrbitGamepad.canceled -= instance.OnOrbitGamepad;
             @Zoom.started -= instance.OnZoom;
             @Zoom.performed -= instance.OnZoom;
             @Zoom.canceled -= instance.OnZoom;
             @ZoomModifier.started -= instance.OnZoomModifier;
             @ZoomModifier.performed -= instance.OnZoomModifier;
             @ZoomModifier.canceled -= instance.OnZoomModifier;
+            @ToggleCameraMode.started -= instance.OnToggleCameraMode;
+            @ToggleCameraMode.performed -= instance.OnToggleCameraMode;
+            @ToggleCameraMode.canceled -= instance.OnToggleCameraMode;
+            @StrafeCameraVertical.started -= instance.OnStrafeCameraVertical;
+            @StrafeCameraVertical.performed -= instance.OnStrafeCameraVertical;
+            @StrafeCameraVertical.canceled -= instance.OnStrafeCameraVertical;
+            @OrbitModifier.started -= instance.OnOrbitModifier;
+            @OrbitModifier.performed -= instance.OnOrbitModifier;
+            @OrbitModifier.canceled -= instance.OnOrbitModifier;
+            @MoveCamera.started -= instance.OnMoveCamera;
+            @MoveCamera.performed -= instance.OnMoveCamera;
+            @MoveCamera.canceled -= instance.OnMoveCamera;
+            @OrbitMouse.started -= instance.OnOrbitMouse;
+            @OrbitMouse.performed -= instance.OnOrbitMouse;
+            @OrbitMouse.canceled -= instance.OnOrbitMouse;
+            @OrbitGamepad.started -= instance.OnOrbitGamepad;
+            @OrbitGamepad.performed -= instance.OnOrbitGamepad;
+            @OrbitGamepad.canceled -= instance.OnOrbitGamepad;
         }
 
         /// <summary>
@@ -990,48 +1152,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     public interface IGameplayActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnMove(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "AllStop" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAllStop(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "AlphaStrike" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnAlphaStrike(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "CycleTarget" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnCycleTarget(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "FireGroup1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnFireGroup1(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "FireGroup2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnFireGroup2(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "FireGroup3" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -1052,6 +1172,48 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnFireGroup5(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "AllStop" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAllStop(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Move" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMove(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "AlphaStrike" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnAlphaStrike(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FireGroup1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFireGroup1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "CycleTarget" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnCycleTarget(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "FireGroup2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnFireGroup2(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Camera" which allows adding and removing callbacks.
@@ -1060,27 +1222,6 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     /// <seealso cref="CameraActions.RemoveCallbacks(ICameraActions)" />
     public interface ICameraActions
     {
-        /// <summary>
-        /// Method invoked when associated input action "OrbitModifier" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnOrbitModifier(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "OrbitMouse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnOrbitMouse(InputAction.CallbackContext context);
-        /// <summary>
-        /// Method invoked when associated input action "OrbitGamepad" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnOrbitGamepad(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Zoom" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
@@ -1095,5 +1236,47 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnZoomModifier(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ToggleCameraMode" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnToggleCameraMode(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "StrafeCameraVertical" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStrafeCameraVertical(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OrbitModifier" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOrbitModifier(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "MoveCamera" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMoveCamera(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OrbitMouse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOrbitMouse(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "OrbitGamepad" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnOrbitGamepad(InputAction.CallbackContext context);
     }
 }

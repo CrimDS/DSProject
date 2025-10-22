@@ -3,15 +3,18 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [Header("Pooling")]
+    [Tooltip("The original prefab of this projectile. MUST be assigned for pooling to work.")]
     [SerializeField] private GameObject originalPrefab;
 
     [Header("Projectile Stats")]
     [SerializeField] protected float projectileSpeed = 200f;
     [SerializeField] protected float projectileLifetime = 5f;
     [SerializeField] protected float damage = 10f;
+    [Tooltip("Controls the projectile's speed over its lifetime. X-axis is normalized time (0=launch, 1=end of life), Y-axis is a multiplier for the Projectile Speed.")]
     [SerializeField] protected AnimationCurve speedOverLifetime = new AnimationCurve(new Keyframe(0, 1), new Keyframe(1, 1));
     [SerializeField] protected GameObject explosionPrefab;
-    [SerializeField] private float collisionGracePeriod = 0.1f;
+    [SerializeField] [Tooltip("A brief period after launch where the projectile will ignore all collisions.")]
+    private float collisionGracePeriod = 0.1f;
     
     protected Transform target;
     protected Rigidbody rb;
@@ -22,7 +25,10 @@ public class Projectile : MonoBehaviour
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        if (rb == null) { rb = gameObject.AddComponent<Rigidbody>(); }
+        if (rb == null)
+        {
+            rb = gameObject.AddComponent<Rigidbody>();
+        }
         rb.isKinematic = false; 
         rb.useGravity = false;
         rb.constraints = RigidbodyConstraints.FreezeRotation;
@@ -41,10 +47,24 @@ public class Projectile : MonoBehaviour
         target = null;
     }
     
+    // --- THE FIX ---
+    // The Start method is now marked as "virtual" so child classes can override it.
+    protected virtual void Start()
+    {
+        // The base projectile's velocity is now set in Initialize() and updated in FixedUpdate().
+        // This Start method can be overridden by specialized projectiles like mines.
+    }
+
     public virtual void Initialize(Transform ownerTransform, Transform initialTarget)
     {
         this.owner = ownerTransform;
         this.target = initialTarget;
+        
+        if (rb != null)
+        {
+            // Set initial velocity based on the curve.
+            rb.linearVelocity = transform.forward * projectileSpeed * speedOverLifetime.Evaluate(0);
+        }
     }
 
     protected virtual void FixedUpdate()
@@ -60,7 +80,7 @@ public class Projectile : MonoBehaviour
     {
         originalPrefab = prefab;
     }
-
+    
     public void SetOwner(Transform ownerTransform) { owner = ownerTransform; }
     public void SetTarget(Transform newTarget) { target = newTarget; }
 
@@ -85,7 +105,7 @@ public class Projectile : MonoBehaviour
 
         if (explosionPrefab != null)
         {
-            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            ObjectPool.Instance.GetFromPool(explosionPrefab, transform.position, Quaternion.identity);
         }
 
         ReturnToPool();

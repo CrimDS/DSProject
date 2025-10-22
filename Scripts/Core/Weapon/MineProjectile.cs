@@ -1,62 +1,52 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// A stationary mine that arms after a delay and explodes when an enemy gets close.
+/// </summary>
 public class MineProjectile : Projectile
 {
     [Header("Mine Properties")]
+    [Tooltip("The delay in seconds before the mine becomes active.")]
     [SerializeField] private float armingTime = 2.0f;
+    [Tooltip("The radius of the trigger that detects nearby enemies.")]
     [SerializeField] private float triggerRadius = 25f;
-    [SerializeField] private float spreadDuration = 1.5f;
 
     private SphereCollider triggerCollider;
-    private bool isDrifting = true;
-    private Vector3 initialDriftVelocity;
 
-    protected override void OnEnable()
-    {
-        base.OnEnable();
-        isDrifting = true;
-        
-        // This coroutine will handle setting up the colliders after the delay.
-        StartCoroutine(ArmMine());
-    }
-
-    public override void Initialize(Transform ownerTransform, Transform initialTarget)
-    {
-        base.Initialize(ownerTransform, initialTarget);
-        initialDriftVelocity = rb.linearVelocity;
-    }
-
-    protected override void FixedUpdate() 
-    {
-        age += Time.fixedDeltaTime;
-
-        if (isDrifting)
-        {
-            if (age < spreadDuration)
-            {
-                rb.linearVelocity = Vector3.Lerp(initialDriftVelocity, Vector3.zero, age / spreadDuration);
-            }
-            else
-            {
-                rb.linearVelocity = Vector3.zero;
-                isDrifting = false;
-            }
-        }
-    }
+    // --- THE CHANGE ---
+    // The Start and FixedUpdate methods are now removed. This mine is completely stationary
+    // and inherits all necessary setup from the base Projectile's OnEnable method.
+    // The Initialize method from the parent will be called, but since we set speed to 0, it won't move.
 
     private IEnumerator ArmMine()
     {
-        // Disable colliders on spawn
-        GetComponent<Collider>().enabled = false;
-        
         yield return new WaitForSeconds(armingTime);
 
-        GetComponent<Collider>().enabled = true;
+        // After the arming delay, enable a large trigger collider.
+        Collider mainCollider = GetComponent<Collider>();
+        if(mainCollider != null)
+        {
+            mainCollider.enabled = true;
+        }
 
         triggerCollider = gameObject.AddComponent<SphereCollider>();
         triggerCollider.isTrigger = true;
         triggerCollider.radius = triggerRadius;
+    }
+
+    // This is called when the projectile is taken from the pool.
+    public override void Initialize(Transform ownerTransform, Transform initialTarget)
+    {
+        base.Initialize(ownerTransform, initialTarget);
+        // Ensure the mine is stationary upon initialization.
+        if(rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+        }
+
+        // Start the arming sequence when the mine is initialized.
+        StartCoroutine(ArmMine());
     }
 
     void OnTriggerEnter(Collider other)
@@ -76,6 +66,7 @@ public class MineProjectile : Projectile
     
     protected override void OnCollisionEnter(Collision collision) 
     {
+        // Only trigger collision logic if the mine is armed.
         if (age > armingTime)
         {
             base.OnCollisionEnter(collision);
